@@ -12,7 +12,7 @@ const NewsSection: React.FC = () => {
             <h2 className="text-xs sm:text-sm font-bold text-emerald-600 uppercase tracking-[0.3em] mb-4">Berita Terbaru</h2>
             <h3 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight">Aksi Nyata Kami di Lapangan</h3>
             <p className="mt-6 text-slate-500 text-lg leading-relaxed">
-              Ikuti perkembangan terbaru upaya konservasi dan berbagai kegiatan komunitas di Desa Banaran.
+              Ikuti perkembangan terbaru upaya konservasi dan berbagai kegiatan komunitas yang diliput oleh media di Pantai Trisik.
             </p>
           </div>
           <a href="#gallery" className="hidden md:flex items-center gap-2 text-emerald-600 font-bold hover:gap-3 transition-all">
@@ -49,9 +49,14 @@ const NewsSection: React.FC = () => {
                 <p className="text-slate-500 text-sm leading-relaxed mb-6 line-clamp-3">
                   {news.excerpt}
                 </p>
-                <button className="mt-auto text-sm font-bold text-slate-900 flex items-center gap-2 group-hover:gap-3 transition-all">
+                <a 
+                  href={news.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="mt-auto text-sm font-bold text-slate-900 flex items-center gap-2 group-hover:gap-3 transition-all"
+                >
                   Baca Selengkapnya <ArrowRight size={16} className="text-emerald-500" />
-                </button>
+                </a>
               </div>
             </div>
           ))}

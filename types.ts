@@ -13,6 +13,7 @@ export interface NewsItem {
   excerpt: string;
   imageUrl: string;
   category: 'Event' | 'Edukasi' | 'Monitoring' | 'Pelepasan';
+  url: string;
 }
 
 export interface GalleryItem {

@@ -1,7 +1,6 @@
 
 import { NewsItem, GalleryItem, TurtleStat } from './types';
 
-// Data statistik penyu untuk visualisasi di StatsSection
 export const TURTLE_STATS: TurtleStat[] = [
   { year: 2019, nests: 42, eggs: 3800, hatchlings: 3100 },
   { year: 2020, nests: 58, eggs: 5400, hatchlings: 4600 },
@@ -14,35 +13,39 @@ export const TURTLE_STATS: TurtleStat[] = [
 export const NEWS_DATA: NewsItem[] = [
   {
     id: 'n1',
-    date: '15 Mei 2024',
-    title: 'Pelepasan 500 Tukik Bersama Komunitas Lokal di Pantai Trisik',
-    excerpt: 'Masyarakat Desa Banaran bersama relawan melakukan pelepasan tukik hasil penetasan alami untuk meningkatkan populasi penyu hijau.',
+    date: '10 Mei 2024',
+    title: 'Ratusan Tukik Dilepasliarkan di Pantai Trisik Kulon Progo',
+    excerpt: 'Kegiatan rutin pelestarian penyu di Pantai Trisik melibatkan berbagai elemen masyarakat untuk menjaga ekosistem laut.',
     imageUrl: 'https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?auto=format&fit=crop&w=800&q=80',
-    category: 'Pelepasan'
+    category: 'Pelepasan',
+    url: 'https://jateng.antaranews.com/berita/489434/ratusan-tukik-dilepasliarkan-di-pantai-trisik-kulon-progo'
   },
   {
     id: 'n2',
-    date: '2 Juni 2024',
-    title: 'Penemuan 12 Sarang Penyu Baru dalam Satu Malam Patroli',
-    excerpt: 'Tim monitoring melaporkan pendaratan penyu yang meningkat drastis pada puncak musim bertelur tahun ini di sepanjang pesisir Banaran.',
+    date: '12 Juni 2023',
+    title: 'Musim Penyu Bertelur di Pantai Trisik Kulon Progo Dimulai',
+    excerpt: 'Petugas dan relawan mulai meningkatkan intensitas patroli malam hari seiring masuknya musim pendaratan penyu.',
     imageUrl: 'https://images.unsplash.com/photo-1591025207163-942350e47db2?auto=format&fit=crop&w=800&q=80',
-    category: 'Monitoring'
+    category: 'Monitoring',
+    url: 'https://www.harianjogja.com/news/read/2023/06/12/514/1138332/musim-penyu-bertelur-di-pantai-trisik-kulon-progo-dimulai'
   },
   {
     id: 'n3',
-    date: '10 Juni 2024',
-    title: 'Edukasi Siswa SD: Menjadi Sahabat Penyu Sejak Dini',
-    excerpt: 'Program rutin kunjungan sekolah ke pusat konservasi untuk mengenalkan siklus hidup penyu dan cara menjaga lingkungan pantai.',
-    imageUrl: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80',
-    category: 'Edukasi'
+    date: '2022',
+    title: 'Pendaratan Penyu di Pantai Trisik Banaran Meningkat',
+    excerpt: 'Data menunjukkan tren positif pendaratan penyu hijau di pesisir selatan Galur berkat upaya konservasi yang konsisten.',
+    imageUrl: 'https://images.unsplash.com/photo-1610473068524-ba4296b63390?auto=format&fit=crop&w=800&q=80',
+    category: 'Monitoring',
+    url: 'https://sorotkulonprogo.com/berita-7104-pendaratan-penyu-di-pantai-trisik-meningkat.html'
   },
   {
     id: 'n4',
-    date: '22 Juni 2024',
-    title: 'Peresmian Ruang Display Edukasi Baru di Pusat Konservasi',
-    excerpt: 'Kini pengunjung dapat melihat miniatur sarang dan alat peraga edukatif lainnya untuk memahami proses konservasi dengan lebih baik.',
-    imageUrl: 'https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?auto=format&fit=crop&w=800&q=80',
-    category: 'Event'
+    date: '2024',
+    title: 'Edukasi Lingkungan: Kunjungan Sekolah ke Pesisir Trisik',
+    excerpt: 'Siswa-siswi mengenal proses penetasan telur penyu semi-alami di pusat informasi konservasi Desa Banaran.',
+    imageUrl: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80',
+    category: 'Edukasi',
+    url: 'https://kulonprogokab.go.id/v21/index.php'
   }
 ];
 
@@ -74,20 +77,6 @@ export const GALLERY_DATA: GalleryItem[] = [
     title: 'Penangkaran Tukik',
     description: 'Fasilitas penetasan telur semi-alami di pusat konservasi Banaran.',
     category: 'kegiatan'
-  },
-  {
-    id: '5',
-    url: 'https://images.unsplash.com/photo-1610473068524-ba4296b63390?auto=format&fit=crop&w=800&q=80',
-    title: 'Evakuasi Telur',
-    description: 'Memindahkan telur penyu ke tempat yang lebih aman dari predator dan air pasang.',
-    category: 'monitoring'
-  },
-  {
-    id: '6',
-    url: 'https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?auto=format&fit=crop&w=800&q=80',
-    title: 'Habitat Pantai',
-    description: 'Kondisi lingkungan Pantai Trisik yang menjadi rumah bagi penyu hijau.',
-    category: 'monitoring'
   }
 ];
 

@@ -6,7 +6,6 @@ import Education from './components/Education';
 import NewsSection from './components/NewsSection';
 import Gallery from './components/Gallery';
 import Footer from './components/Footer';
-import AIChatExpert from './components/AIChatExpert';
 
 const App: React.FC = () => {
   return (
@@ -19,9 +18,6 @@ const App: React.FC = () => {
         <Gallery />
       </main>
       <Footer />
-      
-      {/* Floating AI expert consultation feature */}
-      <AIChatExpert />
       
       {/* Smooth Scroll Utility for Anchors */}
       <style>{`
