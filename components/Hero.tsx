@@ -42,8 +42,8 @@ const Hero: React.FC = () => {
               Pelajari Lebih Lanjut
               <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </a>
-            <a href="#stats" className="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-2xl font-bold transition-all text-center">
-              Lihat Statistik
+            <a href="#news" className="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-2xl font-bold transition-all text-center">
+              Berita Kegiatan
             </a>
           </div>
         </div>

@@ -3,9 +3,10 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Education from './components/Education';
-import StatsSection from './components/StatsSection';
+import NewsSection from './components/NewsSection';
 import Gallery from './components/Gallery';
 import Footer from './components/Footer';
+import AIChatExpert from './components/AIChatExpert';
 
 const App: React.FC = () => {
   return (
@@ -14,10 +15,13 @@ const App: React.FC = () => {
       <main>
         <Hero />
         <Education />
-        <StatsSection />
+        <NewsSection />
         <Gallery />
       </main>
       <Footer />
+      
+      {/* Floating AI expert consultation feature */}
+      <AIChatExpert />
       
       {/* Smooth Scroll Utility for Anchors */}
       <style>{`

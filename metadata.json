@@ -1,8 +1,6 @@
+
 {
   "name": "Konservasi Penyu Banaran",
   "description": "Platform digital untuk edukasi, monitoring data statistik, dan dokumentasi upaya pelestarian penyu di Desa Banaran, Galur, Kulon Progo.",
-  "requestFramePermissions": [
-    "camera",
-    "microphone"
-  ]
+  "requestFramePermissions": []
 }

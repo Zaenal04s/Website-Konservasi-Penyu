@@ -6,6 +6,15 @@ export interface TurtleStat {
   hatchlings: number;
 }
 
+export interface NewsItem {
+  id: string;
+  date: string;
+  title: string;
+  excerpt: string;
+  imageUrl: string;
+  category: 'Event' | 'Edukasi' | 'Monitoring' | 'Pelepasan';
+}
+
 export interface GalleryItem {
   id: string;
   url: string;

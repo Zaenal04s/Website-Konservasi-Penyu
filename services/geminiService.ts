@@ -1,12 +1,11 @@
 
 import { GoogleGenAI } from "@google/genai";
 
-const API_KEY = process.env.API_KEY || "";
-
+// Menggunakan Google GenAI SDK untuk interaksi asisten pakar penyu
 export const getAIResponse = async (prompt: string) => {
-  if (!API_KEY) return "API Key not found.";
-
-  const ai = new GoogleGenAI({ apiKey: API_KEY });
+  // Selalu gunakan named parameter untuk apiKey dan ambil langsung dari process.env.API_KEY
+  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  
   try {
     const response = await ai.models.generateContent({
       model: 'gemini-3-flash-preview',
@@ -19,6 +18,8 @@ export const getAIResponse = async (prompt: string) => {
         temperature: 0.7,
       },
     });
+
+    // Mengambil teks output menggunakan properti .text (bukan metode .text())
     return response.text || "Maaf, saya sedang tidak bisa memproses permintaan Anda.";
   } catch (error) {
     console.error("Gemini API Error:", error);

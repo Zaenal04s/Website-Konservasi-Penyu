@@ -33,9 +33,14 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-bold mb-6">Navigasi</h4>
             <ul className="space-y-4">
-              {['Beranda', 'Tentang Kami', 'Statistik', 'Galeri'].map(item => (
-                <li key={item}>
-                  <a href={`#${item.toLowerCase()}`} className="text-slate-400 text-sm hover:text-emerald-400 transition-colors">{item}</a>
+              {[
+                { label: 'Beranda', href: '#home' },
+                { label: 'Edukasi', href: '#education' },
+                { label: 'Berita', href: '#news' },
+                { label: 'Galeri', href: '#gallery' }
+              ].map(item => (
+                <li key={item.label}>
+                  <a href={item.href} className="text-slate-400 text-sm hover:text-emerald-400 transition-colors">{item.label}</a>
                 </li>
               ))}
             </ul>

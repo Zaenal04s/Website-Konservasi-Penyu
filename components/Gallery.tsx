@@ -1,7 +1,6 @@
 
 import React, { useState } from 'react';
 import { GALLERY_DATA } from '../constants';
-import { Search } from 'lucide-react';
 
 const Gallery: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'all' | 'kegiatan' | 'pelepasan' | 'monitoring'>('all');

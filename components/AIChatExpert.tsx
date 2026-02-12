@@ -1,10 +1,10 @@
 
 import React, { useState, useRef, useEffect } from 'react';
-import { Bot, Send, X, MessageSquare, Loader2 } from 'lucide-react';
+import { Bot, Send, X, MessageSquare, Loader2, AlertCircle } from 'lucide-react';
 import { getAIResponse } from '../services/geminiService';
 
 interface Message {
-  role: 'user' | 'bot';
+  role: 'user' | 'bot' | 'error';
   content: string;
 }
 
@@ -22,8 +22,10 @@ const AIChatExpert: React.FC = () => {
   };
 
   useEffect(() => {
-    scrollToBottom();
-  }, [messages]);
+    if (isOpen) {
+      scrollToBottom();
+    }
+  }, [messages, isOpen]);
 
   const handleSend = async () => {
     if (!input.trim() || isLoading) return;
@@ -33,9 +35,14 @@ const AIChatExpert: React.FC = () => {
     setMessages(prev => [...prev, { role: 'user', content: userMessage }]);
     setIsLoading(true);
 
-    const response = await getAIResponse(userMessage);
-    setMessages(prev => [...prev, { role: 'bot', content: response }]);
-    setIsLoading(false);
+    try {
+      const response = await getAIResponse(userMessage);
+      setMessages(prev => [...prev, { role: 'bot', content: response }]);
+    } catch (err) {
+      setMessages(prev => [...prev, { role: 'error', content: 'Terjadi gangguan koneksi. Silakan coba lagi nanti.' }]);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -51,7 +58,7 @@ const AIChatExpert: React.FC = () => {
         </span>
       </button>
 
-      {/* Chat Window - Responsive Width */}
+      {/* Chat Window */}
       {isOpen && (
         <div className="fixed bottom-20 right-4 left-4 sm:left-auto sm:right-6 z-50 sm:w-[380px] md:w-[420px] h-[calc(100vh-150px)] max-h-[600px] bg-white rounded-[2rem] shadow-2xl border border-slate-200 overflow-hidden flex flex-col animate-in slide-in-from-bottom-8 duration-300">
           {/* Header */}
@@ -80,8 +87,11 @@ const AIChatExpert: React.FC = () => {
                 <div className={`max-w-[85%] p-4 rounded-2xl text-sm leading-relaxed shadow-sm ${
                   msg.role === 'user' 
                     ? 'bg-emerald-600 text-white rounded-tr-none' 
+                    : msg.role === 'error'
+                    ? 'bg-red-50 text-red-600 border border-red-100 rounded-tl-none flex items-center gap-2'
                     : 'bg-white text-slate-700 border border-slate-100 rounded-tl-none'
                 }`}>
+                  {msg.role === 'error' && <AlertCircle size={16} className="shrink-0" />}
                   {msg.content}
                 </div>
               </div>
