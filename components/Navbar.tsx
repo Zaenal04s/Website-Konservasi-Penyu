@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
                   className="w-full h-full object-contain"
                   onError={(e) => {
                     // Fallback jika file lokal tidak ditemukan
-                    (e.currentTarget as HTMLImageElement).src = "Assets/Logo2.png";
+                    (e.currentTarget as HTMLImageElement).src = "/Assets/Logo2.png";
                   }}
                 />
               </div>

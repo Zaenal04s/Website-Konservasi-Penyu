@@ -67,7 +67,7 @@ const Education: React.FC = () => {
             </div>
             <div className="flex-1 w-full max-w-xl">
               <div className="aspect-[4/3] sm:aspect-video rounded-[2rem] overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700">
-                <img src="Assets/Penyu-Hijau.jpg" alt="Turtle Conservation" className="w-full h-full object-cover" />
+                <img src="/Assets/Penyu-Hijau.jpg" alt="Turtle Conservation" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
