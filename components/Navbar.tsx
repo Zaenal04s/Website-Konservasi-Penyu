@@ -71,8 +71,8 @@ const Navbar: React.FC = () => {
         <div className="p-6 flex flex-col h-full">
           <div className="flex justify-between items-center mb-10">
             <div className="flex items-center gap-2">
-              <img src={logoApp} alt="Logo" className="w-8 h-8 object-contain" onError={(e) => ((e.currentTarget as HTMLImageElement).src = "https://cdn-icons-png.flaticon.com/512/814/814513.png")} />
-              <span className="font-bold text-emerald-600">PenyuAbadi</span>
+              <img src={logoApp} alt="Logo" className="w-8 h-8 object-contain" onError={(e) => ((e.currentTarget as HTMLImageElement).src = "/Assets/Logo2.png")} />
+              <span className="font-bold text-emerald-600">Konservasi Penyu Abadi</span>
             </div>
             <button onClick={() => setIsOpen(false)} className="p-2 text-slate-400 hover:text-slate-900">
               <X size={24} />
