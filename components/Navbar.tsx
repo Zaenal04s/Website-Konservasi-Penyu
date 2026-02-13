@@ -85,20 +85,6 @@ const Navbar: React.FC = () => {
               </a>
             ))}
           </div>
-          <div className="mt-auto pt-10 border-t border-slate-100">
-            <p className="text-xs text-slate-400 uppercase tracking-widest font-bold mb-4">Ikuti Kami</p>
-            <div className="flex gap-4">
-              <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">
-                <div className="w-4 h-4 bg-slate-300 rounded-full"></div>
-              </div>
-              <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">
-                <div className="w-4 h-4 bg-slate-300 rounded-full"></div>
-              </div>
-              <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">
-                <div className="w-4 h-4 bg-slate-300 rounded-full"></div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </nav>
